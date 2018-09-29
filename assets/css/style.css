@@ -170,7 +170,7 @@ div {
 }
 
 .top_menu ul li a {
-    color: #CF0000;
+    color: purple;
     display: block;
     font-size: 12px;
     padding: 0 11px;
@@ -270,7 +270,7 @@ div {
 }
 
 .main_menu_area ul li a:hover {
-    background: #CF0000
+    background: purple
 }
 
 #nav li ul {
@@ -385,14 +385,14 @@ div {
 }
 
 .title {
-    border-bottom: 4px solid #CF0000;
+    border-bottom: 4px solid purple;
     font-family: 'bebasregular';
     font-size: 20px;
     word-spacing: 2px
 }
 
 .more {
-    background: url("images/plus.png") no-repeat scroll 57px 9px #CF0000;
+    background: url("images/plus.png") no-repeat scroll 57px 9px purple;
     color: #FFF;
     display: block;
     font-size: 10px;
@@ -405,7 +405,7 @@ div {
 }
 
 .popular_more {
-    background: url("images/plus.png") no-repeat scroll 57px 12px #CF0000;
+    background: url("images/plus.png") no-repeat scroll 57px 12px purple;
     color: #FFF;
     display: block;
     font-size: 10px;
@@ -423,7 +423,7 @@ div {
 
 .readmore,
 .single_cat_right_content_meta span {
-    color: #CF0000;
+    color: purple;
     font-size: 10px;
     text-transform: uppercase;
     font-weight: bold;
@@ -432,7 +432,7 @@ div {
 
 .readmore:hover,
 .single_cat_right_content_meta span:hover {
-    color: #CF0000;
+    color: purple;
     text-decoration: underline
 }
 
@@ -461,7 +461,7 @@ div {
 }
 
 .single_cat_left_content_meta span {
-    color: #cf0000
+    color: purple
 }
 
 .right_coloum {
@@ -499,7 +499,7 @@ div {
 .editorial {}
 
 .editorial h3 {
-    color: #CF0000
+    color: purple
 }
 
 .sidebar {
@@ -537,7 +537,7 @@ div {
 }
 
 .news-letter form input#form-submit {
-    background: none repeat scroll 0 0 #CF0000;
+    background: none repeat scroll 0 0 purple;
     border: medium none;
     color: #FFF;
     font-weight: bold;
@@ -546,7 +546,7 @@ div {
 }
 
 .news-letter-privacy {
-    color: #cf0000;
+    color: purple;
     margin-top: 10px
 }
 

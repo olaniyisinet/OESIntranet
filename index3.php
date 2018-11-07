@@ -28,36 +28,16 @@
                         <li><a href="#">Quick Links</a></li>
                     </ul>
                 </div>
-                <div class="social_plus_search floatright" style=" ">
-                    <div class="social">
-                        <p style="font-size: 15px" id="weather"></p>
-                        <br>
-                        <p style="font-size: 15px" id="time"></p>
-                        <br>
-                        <p style="font-size: 15px" id="greet">Good Morning </p>
-<!--                        <p>Jerry Ugochukwu Egbor</p>-->
-                    </div>
-                </div>
+              
             </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="alert alert-dismissible" role="" style="background-color: #352F5F; color: white">
-                        <marquee>
-                            <p style="font-size: 10pt; color: white" id="tips" class="tips">Safety Tips!!!! --- Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor! --- Safety Tips</p>
-                        </marquee>
-                    </div>
-                </div>
-            </div>
-
+          
             <div class="slider_area">
 
                 <div class="slider">
-                    <ul class="bxslider">
+                    
                         <li><img src="images/1.jpg" alt="" title="Slider caption text" /></li>
-                        <li><img src="images/2.jpg" alt="" title="Slider caption text" /></li>
-                        <li><img src="images/3.jpg" alt="" title="Slider caption text" /></li>
-                    </ul>
+                                       
                 </div>
             </div>
             <div class="content_area">
@@ -66,10 +46,6 @@
                         <div class="single_left_coloum_wrapper" style="background-color: white; border-radius: 5px; height: 300px">
                             <div style="padding: 5px">
                                 <h2 class="title">News Update</h2>
-                                <div id ="news" class="news">
-                                    
-                                </div>
-<!--
                                 <div class="single_left_coloum floatleft" style="margin: 0 10px"> <img src="images/single_featured.png" alt="" />
                                     <h3>Lorem ipsum dolor sit amet, consectetur</h3>
                                     <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor eu mattis.</p>
@@ -82,7 +58,6 @@
                                     <h3>Lorem ipsum dolor sit amet, consectetur</h3>
                                     <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor eu mattis.</p>
                                     <a class="readmore" href="#">read more</a> </div>
--->
                             </div>
                         </div>
                     </div>
@@ -90,11 +65,18 @@
                 <div class="sidebar floatright" style="color: white; height: 300px">
                     <div class="social_plus_search floatright" style=" background-color: #FD6E00">
                         <div class="social">
-                            <p style="font-size: 15px">Recent Announcements</p>
+                            <p style="font-size: 15px">Announcements</p>
                             <br>
-                            <div class="ann"></div>
-                           
-<!--                            <p><a href="#">Read More</a></p>-->
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p>Announcements</p>
+                            <p><a href="#">Read More</a></p>
                         </div>
                     </div>
                 </div>
@@ -108,10 +90,8 @@
                                 <div class="single_left_coloum floatleft" style="">
                                     <h3>Recent Discussions</h3>
                                     <br>
-                                    <div class="disc"></div>
-                                   
-                                
-                                </div>
+                                    <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor eu mattis.</p>
+                                    <a class="readmore" href="#">read more</a> </div>
                             </div>
                         </div>
 
@@ -176,139 +156,6 @@
             captions: true
         });
 
-    </script>
-    
-    <script>
-    // A $( document ).ready() block.
-$( document ).ready(function() {
-    console.log( "ready!" );
-    var date = new Date();
-var d = date.getDay();
-    var weekday = new Array(7);
-weekday[0] =  "Sunday";
-weekday[1] = "Monday";
-weekday[2] = "Tuesday";
-weekday[3] = "Wednesday";
-weekday[4] = "Thursday";
-weekday[5] = "Friday";
-weekday[6] = "Saturday";
-    var m = date.getMonth();
-    var da = date.getDate();
-    var y = date.getFullYear();
-var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  minutes = minutes < 10 ? '0'+minutes : minutes;
-  var strTime = hours + ':' + minutes + ' ' + ampm;
-    
-    var hrs = date.getHours();
-     var greet;
-
-    if (hrs < 12)
-        greet = 'Good Morning';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening';
-    
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    
-    document.getElementById("weather").innerHTML ="<b>" + weekday[d] + ", " + months[m] + " " + da + ", " + y + ' <img src="images/weather.jpg" style="align-self: flex-end"> </b>'
-    document.getElementById("time").innerHTML ="<b>Current Time: "+hours + ':' + minutes + ' ' + ampm+"</b>"
-    document.getElementById("greet").innerHTML ="<b>"+ greet +"</b>"
-
-    
- $.ajax({
-            url: 'http://localhost:55300/api/values/news',
-            data: {
-                format: 'json'
-            },
-                      dataType: 'json',
-            success: function (data) {
-                  var $state = $(".news");
-        $state.empty();
-                var obj = JSON.stringify(data.categories) ;
-          
-var stringify = JSON.parse(obj);
-                                
-                    var $state = $(".news");
-        $state.empty();
-                    
-                    for (var i = 0; i < stringify.length; i++) {
-                                $state.append('<div class="single_left_coloum floatleft" style="margin: 0 10px"> <img src="images/single_featured.png" alt="" /><h3>'+stringify[i]['Title']+'</h3><p>'+ stringify[i]['Description'] + '</p><a class="readmore" href="more.html?id='+stringify[i]['CategoryID']+'">read more</a> </div>')
-                    } 
-            },
-            type: 'GET'
-        });
-    
-     $.ajax({
-            url: 'http://localhost:55300/api/values/announcements',
-            data: {
-                format: 'json'
-            },
-                      dataType: 'json',
-            success: function (data) {
-                 var $state = $(".ann");
-        $state.empty();
-                var obj = JSON.stringify(data.categories) ;
-          
-var stringify = JSON.parse(obj);
-                
-for (var i = 0; i < stringify.length; i++) {
-  //  console.log(stringify[i]['Description']);
-       $state.append('---- '+ stringify[i]['Description']+ ' <br> ')
-}
-            },
-            type: 'GET'
-        });
-    
-       $.ajax({
-            url: 'http://localhost:55300/api/values/discussion',
-            data: {
-                format: 'json'
-            },
-                      dataType: 'json',
-            success: function (data) {
-                var $state = $(".disc");
-        $state.empty();
-               var obj = JSON.stringify(data.categories) ;
-              //  alert(obj);
-                
-var stringify = JSON.parse(obj);
-                
-for (var i = 0; i < stringify.length; i++) {
-  //  console.log(stringify[i]['Description']);
-       $state.append('---- '+ stringify[i]['Description']+ ' ---- ')
-} 
-             
-            },
-            type: 'GET'
-        });
-    
-    $.ajax({
-            url: 'http://localhost:55300/api/values/tips',
-            data: {
-                format: 'json'
-            },
-                      dataType: 'json',
-            success: function (data) {
-                 var $state = $(".tips");
-        $state.empty();
-                var obj = JSON.stringify(data.categories) ;
-              //  alert(obj);
-                
-var stringify = JSON.parse(obj);
-                
-for (var i = 0; i < stringify.length; i++) {
-  //  console.log(stringify[i]['Description']);
-       $state.append('---- '+ stringify[i]['Description']+ ' ---- ')
-}
-            },
-            type: 'GET'
-        });
-});
     </script>
 </body>
 
